@@ -1,0 +1,8 @@
+== Sample Application 
+Uses twitter bootstrap & will_paginate to display public hospital data from data.gov.  
+
+== Loading Data
+from within the lib/tasks run the following 2 commands
+> ruby convert_to_seeds.rb > ../../db/seeds.rb
+> rake db:seeds
+This loads the data into the seeds.rb file from the csv file from data.gov  

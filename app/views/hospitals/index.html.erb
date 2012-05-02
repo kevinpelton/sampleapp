@@ -1,0 +1,30 @@
+<h1>Hospitals</h1>
+<%= will_paginate @hospitals %> 
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Hospital Name</th>
+      <th>City</th>
+      <th>County</th>
+      <th>State</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @hospitals.each do |hospital| %>
+      <tr>
+        <td><%= link_to hospital.name, hospital_path(hospital) %></td>
+        <td><%= hospital.city %></td>
+        <td><%= hospital.county %></td>
+        <td><%= hospital.state %></td>
+        <td>
+          <%= link_to 'Edit', edit_hospital_path(hospital), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', hospital_path(hospital), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @hospitals %> 

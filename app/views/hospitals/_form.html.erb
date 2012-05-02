@@ -1,0 +1,80 @@
+<%= form_for @hospital, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Hospital</legend>
+
+    <div class="control-group">
+      <%= f.label :name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :address, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :address, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :city, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :city, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :state, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :state, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :zip, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :zip, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :county, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :county, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :hospital_type, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :hospital_type, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :owner, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :owner, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :emergency_services, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :emergency_services, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :location, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :location, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', hospitals_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>
