@@ -6,3 +6,4 @@ from within the lib/tasks run the following 2 commands
 > ruby convert_to_seeds.rb > ../../db/seeds.rb
 > rake db:seeds
 This loads the data into the seeds.rb file from the csv file from data.gov  
+This approach makes it easy to load the data on heroku using heroku rake db:seed although tap is also an option.   

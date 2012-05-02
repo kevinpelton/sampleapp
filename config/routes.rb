@@ -1,5 +1,6 @@
 Hospitalview::Application.routes.draw do
   resources :hospitals
+  resources :charts, :only => [:index]
   root :to => 'hospitals#index'
 
   # The priority is based upon order of creation:

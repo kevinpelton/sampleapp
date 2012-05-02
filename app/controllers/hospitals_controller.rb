@@ -3,12 +3,7 @@ class HospitalsController < ApplicationController
   # GET /hospitals
   # GET /hospitals.json
   def index
-    @hospitals = Hospital.all
-#    @hospitals = Hospital.paginate(:page => params[:page], :per_page => 30)
-#@hospitals = Hospital.paginate(:page => params[:page])
-#@hospitals = Hospital.all.paginate :per_page => 50, :page => params[:page]
-@hospitals = @hospitals.paginate(:page => params[:page], :per_page => 50)
-
+    @hospitals = Hospital.all.paginate(:page => params[:page], :per_page => 50)
 
     respond_to do |format|
       format.html # index.html.erb
