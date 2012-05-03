@@ -1,3 +1,20 @@
-<h1>Bubble Chart of Hospitals</h1>
+<h1>Hospitals by Type</h1>
 
-I like bananas.... what is going on here... 
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>State</th>
+      <th># Hopsitals</th>
+      <th>Hopsital Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @hospitals.each do |hospital| %>
+      <tr>
+        <td><%= hospital.state %></td>
+        <td><%= hospital.total_hospitals %></td>
+        <td><%= hospital.hospital_type %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
